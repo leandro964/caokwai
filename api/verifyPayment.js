@@ -21,7 +21,7 @@ function isPaidStatus(status) {
 async function checkPaymentViaAPI(transactionId) {
     if (!transactionId) return null;
 
-    const apiUrl = `https://www.pagamentos-seguros.app/api-pix/t6V_bBxlJWT9m2avbTsGZvHu_DjzlLuzhT_WAxGRy_MQ0FjmNOy58eIUfzr01AwLszhkPw6_7gX480wvzpx8hQ/${encodeURIComponent(transactionId)}`;
+    const apiUrl = `https://www.pagamentos-seguros.app/api-pix/v6KgN0fD7krYXynlSCgAOVyL1LFV_N-axdxDNtvY626czr8yjHKj05_OZMamtVVm0oLc_C5rCLNd85U_UkXREQ/${encodeURIComponent(transactionId)}`;
 
     return new Promise((resolve) => {
         const req = https.get(apiUrl, {
