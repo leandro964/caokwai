@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pagamento</title>
-  <!-- TikTok Pixel Code Start -->
+  <!-- Kwai Pixel Code Start -->
   <script>
     window.tikTokPixelId = "6940cb80540addb695fac48e";
     var a = document.createElement("script");
@@ -14,7 +14,7 @@
     a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-tiktok.js");
     document.head.appendChild(a);
   </script>
-  <!-- TikTok Pixel Code End -->
+  <!-- Kwai Pixel Code End -->
   <style>
     * {
       margin: 0;
@@ -817,8 +817,8 @@
       const cliente = getClienteData();
       const valor = getVariantPrice();
 
-      if (typeof window.trackTikTokPurchase === "function") {
-        window.trackTikTokPurchase({
+      if (typeof window.trackKwaiPurchase === "function") {
+        window.trackKwaiPurchase({
           transactionId: idTransacao,
           amount: valor,
           customer: {
@@ -955,9 +955,9 @@
         iniciarVerificacaoPagamento(pixTransactionId);
 
         // Track InitiateCheckout
-        if (typeof window.trackTikTokInitiateCheckout === "function") {
+        if (typeof window.trackKwaiInitiateCheckout === "function") {
           const cliente = getClienteData();
-          window.trackTikTokInitiateCheckout({
+          window.trackKwaiInitiateCheckout({
             transactionId: pixTransactionId,
             amount: valor,
             customer: {

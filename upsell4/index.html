@@ -7,7 +7,7 @@
   <meta name="robots" content="max-image-preview:large" />
   <title>Pagamento Urgente</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" />
-  <!-- TikTok Pixel Code Start -->
+  <!-- Kwai Pixel Code Start -->
   <script>
     window.tikTokPixelId = "6940cb80540addb695fac48e";
     var a = document.createElement("script");
@@ -19,7 +19,7 @@
   <script src="https://cdn.jsdelivr.net/gh/xTracky/static@latest/utm-handler.js"
     data-token="b8dd940a-6d15-41a7-93d5-1df862b9cca6">
     </script>
-  <!-- TikTok Pixel Code End -->
+  <!-- Kwai Pixel Code End -->
 </head>
 
 <body style="
@@ -717,8 +717,8 @@
       const cliente = getClienteData();
       const valor = getVariantPrice();
 
-      if (typeof window.trackTikTokPurchase === "function") {
-        window.trackTikTokPurchase({
+      if (typeof window.trackKwaiPurchase === "function") {
+        window.trackKwaiPurchase({
           transactionId: idTransacao,
           amount: valor,
           customer: {
@@ -855,9 +855,9 @@
         iniciarVerificacaoPagamento(pixTransactionId);
 
         // Track InitiateCheckout
-        if (typeof window.trackTikTokInitiateCheckout === "function") {
+        if (typeof window.trackKwaiInitiateCheckout === "function") {
           const cliente = getClienteData();
-          window.trackTikTokInitiateCheckout({
+          window.trackKwaiInitiateCheckout({
             transactionId: pixTransactionId,
             amount: valor,
             customer: {
